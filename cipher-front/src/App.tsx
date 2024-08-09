@@ -1,9 +1,12 @@
+import { Container } from '@mui/material';
+import Cipher from './features/Cipher';
+
 const App = () => {
 
   return (
-    <>
-      Hello
-    </>
+    <Container maxWidth="xl" component="main">
+      <Cipher/>
+    </Container>
   )
 };
 
