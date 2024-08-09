@@ -26,12 +26,14 @@ const Cipher: React.FC = () => {
     if (inputData.inputText && inputData.password) {
       dispatch(encodeMessage({ password: inputData.password, message: inputData.inputText }));
     }
+    setInputData({ inputText: '', inputCipher: '', password: '' });
   };
 
   const handleDecode = () => {
     if (inputData.inputCipher && inputData.password) {
       dispatch(decodeMessage({ password: inputData.password, message: inputData.inputCipher }));
     }
+    setInputData({ inputText: '', inputCipher: '', password: '' });
   };
 
   return (
